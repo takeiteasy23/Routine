@@ -5,6 +5,10 @@
 *.suo
 *.user
 *.sln.docstates
+*.lock
+*.ide
+*.ide-shm
+*.ide-wal
 
 # Build results
 
