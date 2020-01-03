@@ -33,14 +33,64 @@ namespace Routine
             Gl.glClear(Gl.GL_COLOR_BUFFER_BIT);
             Gl.glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
 
-            Gl.glColor3ub(255, 200, 200);
+            drawWall();
+            // drawTable();
+            
+        }
 
+        private void drawWall()
+        {
+            Gl.glColor3ub(200, 200, 200);
             Gl.glBegin(Gl.GL_POLYGON);
-            Gl.glVertex3d(-0.3, 0.3, 0);
-            Gl.glVertex3d(0.3, 0.3, 0);
-            Gl.glVertex3d(0.3, -0.3, 0);
-            Gl.glVertex3d(-0.3, -0.3, 0);
+            Gl.glVertex3d(-1.0, 1.0, 0);
+            Gl.glVertex3d(0.55, 1.0, 0);
+            Gl.glVertex3d(0.55, -0.2, 0);
+            Gl.glVertex3d(-1.0, -0.2, 0);
+            Gl.glEnd();
+
+            Gl.glColor3ub(175, 175, 175);
+            Gl.glBegin(Gl.GL_POLYGON);
+            Gl.glVertex3d(0.55, 1.0, 0);
+            Gl.glVertex3d(1.0, 1.0, 0);
+            Gl.glVertex3d(1.0, -0.8, 0);
+            Gl.glVertex3d(0.55, -0.2, 0);
+            Gl.glEnd();
+
+            Gl.glColor3ub(225, 225, 225);
+            Gl.glBegin(Gl.GL_POLYGON);
+            Gl.glVertex3d(-1.0, -0.2, 0);
+            Gl.glVertex3d(0.55, -0.2, 0);
+            Gl.glVertex3d(1.0, -0.8, 0);
+            Gl.glVertex3d(1.0, -1.0, 0);
+            Gl.glVertex3d(-1.0, -1.0, 0);
             Gl.glEnd();
         }
+        /*
+        private void drawTable()
+        {
+            Gl.glColor3ub(225, 150, 50);
+            Gl.glBegin(Gl.GL_POLYGON);
+            Gl.glVertex3d(0.55, 0.3, 0.01);
+            Gl.glVertex3d(0.9, 0.0, 0);
+            Gl.glVertex3d(-0.7, 0.0, 0);
+            Gl.glVertex3d(-0.35, 0.3, 0);
+            Gl.glEnd();
+
+            Gl.glColor3ub(200, 125, 25);
+            Gl.glBegin(Gl.GL_POLYGON);
+            Gl.glVertex3d(-0.7, 0.0, 0.01);
+            Gl.glVertex3d(0.9, 0.0, 0);
+            Gl.glVertex3d(0.9, -0.03, 0);
+            Gl.glVertex3d(-0.7, -0.03, 0);
+            Gl.glEnd();
+
+            Gl.glColor3ub(180, 105, 5);
+            Gl.glBegin(Gl.GL_POLYGON);
+            Gl.glVertex3d(0.9, -0.03, 0.01);
+            Gl.glVertex3d(0.9, -0.67, 0.01);
+            Gl.glVertex3d(0.86, -0.67, 0.01);
+            Gl.glVertex3d(0.86, -0.03, 0.01);
+            Gl.glEnd();
+        }*/
     }
 }
